@@ -3,5 +3,5 @@
 This is a E-commerce Project : FlagshipFaceOff
 
 ## Technology
--[@React](https://react.dev/learn)
+-[React](https://react.dev/learn)
 
