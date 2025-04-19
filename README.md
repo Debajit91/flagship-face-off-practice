@@ -2,9 +2,6 @@
 
 This is a E-commerce Project : FlagshipFaceOff
 
-## Technology 
-
-[React]
-[JavaScript]
-
+## Technology
+-[@React](https://react.dev/learn)
 
