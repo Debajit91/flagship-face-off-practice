@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import Buttons from '../UI/Buttons';
 import { MdShoppingCartCheckout, MdBookmarkAdd } from "react-icons/md";
+import { addFavorite } from '../Utils';
 
 const PhonesDetails = () => {
     const data = useLoaderData();
@@ -11,6 +12,11 @@ const PhonesDetails = () => {
         name, image, brand, model, price, description,
         storage, camera_info,
     } = singlePhone || {};
+
+    const handleFavorite = ()=>{
+        addFavorite(singlePhone);
+    }
+
     return (
         <div className='w-full py-12'>
             <img className='w-full mx-auto md:w-auto mb-8' src={image} alt="Phone Image" />
@@ -18,7 +24,7 @@ const PhonesDetails = () => {
                 <h1 className='text-6xl font-thin text-gray-900'>{name}</h1>
                 <div className='space-x-4'>
                     <Buttons label={<MdShoppingCartCheckout />} />
-                    <Buttons label={<MdBookmarkAdd />}/>
+                    <Buttons onClick={handleFavorite} label={<MdBookmarkAdd />}/>
                 </div>
             </div>
         </div>
